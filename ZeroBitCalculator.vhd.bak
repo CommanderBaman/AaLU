@@ -1,0 +1,13 @@
+entity ZeroBitCalculator is 
+	port (
+		S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16: in bit; 
+		Carry: in bit;
+		zeroBit: out bit
+	);
+end ZeroBitCalculator;
+
+architecture ZeroBitLogic of ZeroBitCalculator is 	
+	-- writing logic
+	begin
+	zeroBit <= S1 or S2 or S3 or S4 or S5 or S6 or S7 or S8 or S9 or S10 or S11 or S12 or S13 or S14 or S15 or S16 or Carry; 
+end ZeroBitLogic;
