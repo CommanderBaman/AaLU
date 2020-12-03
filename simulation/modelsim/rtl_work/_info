@@ -1,0 +1,401 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/study material/IITB/project 224/simulation/modelsim
+Ealu
+Z1 w1607021088
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8D:/study material/IITB/project 224/ALU.vhd
+Z5 FD:/study material/IITB/project 224/ALU.vhd
+l0
+L4 1
+VFE:i7@_kKa9Y6Vk=SCR>20
+!s100 _zR`iP]W7fk30FO`P63c<0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1607021124
+!i10b 1
+Z8 !s108 1607021123.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/ALU.vhd|
+Z10 !s107 D:/study material/IITB/project 224/ALU.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aalu_logic
+R2
+R3
+DEx4 work 3 alu 0 22 FE:i7@_kKa9Y6Vk=SCR>20
+!i122 0
+l78
+L16 92
+V3lTYL_QGCjGoz1lMG6Jd72
+!s100 TXa>G<m3ffN1UhJSEfP8T1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eand_2input
+Z13 w1607005302
+!i122 2
+R0
+Z14 8D:/study material/IITB/project 224/and_2input.vhd
+Z15 FD:/study material/IITB/project 224/and_2input.vhd
+l0
+L1 1
+VfAFce];SWmWZ?_^_mJP^i0
+!s100 KUMF`nnJ[[PRWI[R?<g1W0
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1607021124.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/and_2input.vhd|
+Z18 !s107 D:/study material/IITB/project 224/and_2input.vhd|
+!i113 1
+R11
+R12
+Aand_logic
+DEx4 work 10 and_2input 0 22 fAFce];SWmWZ?_^_mJP^i0
+!i122 2
+l10
+L8 7
+VaSGG1XNP^Jc72HV4AA2Kj1
+!s100 =DSH^joaz8SlQOez8>UzL0
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Eget1complement
+Z19 w1607007534
+R2
+R3
+!i122 6
+R0
+Z20 8D:/study material/IITB/project 224/Get1Complement.vhd
+Z21 FD:/study material/IITB/project 224/Get1Complement.vhd
+l0
+L4 1
+Vmha<Ke]LXEeiGb_E[8RDB0
+!s100 5P<eXL@o`F8bMoBRnhLWF1
+R6
+31
+R7
+!i10b 1
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/Get1Complement.vhd|
+Z23 !s107 D:/study material/IITB/project 224/Get1Complement.vhd|
+!i113 1
+R11
+R12
+Aget1complementlogic
+R2
+R3
+DEx4 work 14 get1complement 0 22 mha<Ke]LXEeiGb_E[8RDB0
+!i122 6
+l23
+L15 20
+V^@fGO_O9_MA8`[L?TN`W]0
+!s100 D=eOE@SbmYFzEj3e8dggH3
+R6
+31
+R7
+!i10b 1
+R16
+R22
+R23
+!i113 1
+R11
+R12
+Egpgen
+Z24 w1607005810
+R2
+R3
+!i122 3
+R0
+Z25 8D:/study material/IITB/project 224/gpgen.vhd
+Z26 FD:/study material/IITB/project 224/gpgen.vhd
+l0
+L4 1
+V5G[HjM@]2TGoBA]O42;[a2
+!s100 C>U_C0QW799zG7L;d<L[O3
+R6
+31
+R7
+!i10b 1
+R16
+Z27 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/gpgen.vhd|
+Z28 !s107 D:/study material/IITB/project 224/gpgen.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 5 gpgen 0 22 5G[HjM@]2TGoBA]O42;[a2
+!i122 3
+l25
+L11 20
+V]<hN9::If[YBDmkUIHNaf2
+!s100 <41@kZL^[GW>:k5olKkY13
+R6
+31
+R7
+!i10b 1
+R16
+R27
+R28
+!i113 1
+R11
+R12
+Ekoggestoneadder
+Z29 w1607021049
+R2
+R3
+!i122 5
+R0
+Z30 8D:/study material/IITB/project 224/KoggeStoneAdder.vhd
+Z31 FD:/study material/IITB/project 224/KoggeStoneAdder.vhd
+l0
+L3 1
+VIcnM]o6mAB40D;`V@Q06`3
+!s100 5YDFm>QH`>^Fn<hjG^=In1
+R6
+31
+R7
+!i10b 1
+R16
+Z32 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/KoggeStoneAdder.vhd|
+Z33 !s107 D:/study material/IITB/project 224/KoggeStoneAdder.vhd|
+!i113 1
+R11
+R12
+Akoggestoneadderlogic
+R2
+R3
+DEx4 work 15 koggestoneadder 0 22 IcnM]o6mAB40D;`V@Q06`3
+!i122 5
+l65
+L14 113
+Vh7NW9i5XbEKhFLGF;`@Qi2
+!s100 RLoiXIUg8jZhV`j6?cBCU0
+R6
+31
+R7
+!i10b 1
+R16
+R32
+R33
+!i113 1
+R11
+R12
+Enode_operation
+Z34 w1607014023
+!i122 4
+R0
+Z35 8D:/study material/IITB/project 224/node_operation.vhd
+Z36 FD:/study material/IITB/project 224/node_operation.vhd
+l0
+L1 1
+VP7CYI?UTV2^nkY6o:3:JD3
+!s100 S[b9NXgLoOhlg^z5CPjB02
+R6
+31
+R7
+!i10b 1
+R16
+Z37 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/node_operation.vhd|
+Z38 !s107 D:/study material/IITB/project 224/node_operation.vhd|
+!i113 1
+R11
+R12
+Aarch
+DEx4 work 14 node_operation 0 22 P7CYI?UTV2^nkY6o:3:JD3
+!i122 4
+l22
+L9 20
+VFV3M_^hUhW@ma8?XEY;3d2
+!s100 3j8B`9mR19FLX=SB`em=83
+R6
+31
+R7
+!i10b 1
+R16
+R37
+R38
+!i113 1
+R11
+R12
+Eselecthandler
+Z39 w1607006265
+!i122 8
+R0
+Z40 8D:/study material/IITB/project 224/SelectHandler.vhd
+Z41 FD:/study material/IITB/project 224/SelectHandler.vhd
+l0
+L1 1
+VgmkPU2Vfg0@`BfI_ca=o51
+!s100 Nk=YU=[K@VgORkbKEo>DV1
+R6
+31
+R7
+!i10b 1
+R16
+Z42 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/SelectHandler.vhd|
+Z43 !s107 D:/study material/IITB/project 224/SelectHandler.vhd|
+!i113 1
+R11
+R12
+Aselectlogic
+DEx4 work 13 selecthandler 0 22 gmkPU2Vfg0@`BfI_ca=o51
+!i122 8
+l10
+L9 7
+VS_RKVV=Tkg6bKQi]zOlRi0
+!s100 ?ASU4L0i;]bbaXNAXT9=j0
+R6
+31
+R7
+!i10b 1
+R16
+R42
+R43
+!i113 1
+R11
+R12
+Etestbench
+Z44 w1607016422
+R2
+R3
+!i122 9
+R0
+Z45 8D:/study material/IITB/project 224/Testbench.vhd
+Z46 FD:/study material/IITB/project 224/Testbench.vhd
+l0
+L4 1
+V?;3E9R?=9NO@>;;RGnNL=3
+!s100 zV?DSKOdjRnaRgmTS>F@00
+R6
+31
+R7
+!i10b 1
+R16
+Z47 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/Testbench.vhd|
+!s107 D:/study material/IITB/project 224/Testbench.vhd|
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+DEx4 work 9 testbench 0 22 ?;3E9R?=9NO@>;;RGnNL=3
+!i122 9
+l22
+L7 31
+VfjH5l_^6CC5OjLf7bchWT3
+!s100 mX^j^akH66X]S46L[z<<?0
+R6
+31
+R7
+!i10b 1
+R16
+R47
+Z48 !s107 D:/study material/IITB/project 224/Testbench.vhd|
+!i113 1
+R11
+R12
+Exor_2input
+Z49 w1607005264
+!i122 1
+R0
+Z50 8D:/study material/IITB/project 224/XOR_2input.vhd
+Z51 FD:/study material/IITB/project 224/XOR_2input.vhd
+l0
+L1 1
+VVDT``hIMedDZlRfn7NM`80
+!s100 9DAZojjPIfUL8;kNgmSVn2
+R6
+31
+R7
+!i10b 1
+R16
+Z52 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/XOR_2input.vhd|
+Z53 !s107 D:/study material/IITB/project 224/XOR_2input.vhd|
+!i113 1
+R11
+R12
+Axor_logic
+DEx4 work 10 xor_2input 0 22 VDT``hIMedDZlRfn7NM`80
+!i122 1
+l10
+L8 7
+VB^OIZ3gJClzJlY7gI`WzG0
+!s100 dKGDMknH@GH4EJ_H;OS@:1
+R6
+31
+R7
+!i10b 1
+R16
+R52
+R53
+!i113 1
+R11
+R12
+Ezerobitcalculator
+Z54 w1607007167
+!i122 7
+R0
+Z55 8D:/study material/IITB/project 224/ZeroBitCalculator.vhd
+Z56 FD:/study material/IITB/project 224/ZeroBitCalculator.vhd
+l0
+L1 1
+VZj[i;U1F@7h0AH0<T3JA62
+!s100 k<3;LC7X;3?DiISn0LH752
+R6
+31
+R7
+!i10b 1
+R16
+Z57 !s90 -reportprogress|300|-93|-work|work|D:/study material/IITB/project 224/ZeroBitCalculator.vhd|
+Z58 !s107 D:/study material/IITB/project 224/ZeroBitCalculator.vhd|
+!i113 1
+R11
+R12
+Azerobitlogic
+DEx4 work 17 zerobitcalculator 0 22 Zj[i;U1F@7h0AH0<T3JA62
+!i122 7
+l13
+L9 8
+VV[kKA`;AEVEAgTNFaMnc?2
+!s100 _@g;LnJ`zFFEmDPlkD0d:2
+R6
+31
+R7
+!i10b 1
+R16
+R57
+R58
+!i113 1
+R11
+R12

@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity testbench is
+end testbench;
+
+architecture tb of testbench is
+
+signal A,B,S:bit_vector(15 downto 0);
+signal C_in,C_out:bit;
+
+component Adder is
+   Port(  Input0,Input2 : in bit_vector(15 downto 0);
+	       S0 , S1 : in bit;
+          Sum	 		  : out bit_vector(15 downto 0);
+			 z : out bit;
+			
+			       );
+end component;
+
+
+begin 
+dut_instance:Adder
+port map(Input0=>A,Input2=>B,Sum=>S,Carry_in=>C_in,Carry_output=>C_out);
+
+process
+begin
+
+S1 <= 0;
+S2 <= 0;
+A<="0000000010000000";
+B<="0000000010000000";
+
+
+wait for 5 ns;
+end process;
+end tb;

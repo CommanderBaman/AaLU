@@ -1,13 +1,15 @@
 entity ZeroBitCalculator is 
 	port (
-		-- 17 bits defined = 16 bit for sum and 1 bit for carry 
-		in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, in11, in12, in13, in14, in15, in16, in17: in bit; 
+		invec    : IN bit_vector(15 downto 0);
 		zeroBit: out bit
 	);
 end ZeroBitCalculator;
 
 architecture ZeroBitLogic of ZeroBitCalculator is 	
+
+   signal temp1 : bit; 
 	-- writing logic
 	begin
-	zeroBit <= in1 or in2 or in3 or in4 or in5 or in6 or in7 or in8 or in9 or in10 or in11 or in12 or in13 or in14 or in15 or in16 or in17; 
+	temp1 <= invec(0) or invec(1) or invec(2) or invec(3) or invec(4) or invec(5) or invec(6) or invec(7) or invec(8) or invec(9) or invec(10) or invec(11) or invec(12) or invec(13) or invec(14) or invec(15); 
+	zeroBit <= not temp1;
 end ZeroBitLogic;

@@ -1,0 +1,1959 @@
+|ALU
+A[0] => KoggeStoneAdder:MainAdder.A[0]
+A[1] => KoggeStoneAdder:MainAdder.A[1]
+A[2] => KoggeStoneAdder:MainAdder.A[2]
+A[3] => KoggeStoneAdder:MainAdder.A[3]
+A[4] => KoggeStoneAdder:MainAdder.A[4]
+A[5] => KoggeStoneAdder:MainAdder.A[5]
+A[6] => KoggeStoneAdder:MainAdder.A[6]
+A[7] => KoggeStoneAdder:MainAdder.A[7]
+A[8] => KoggeStoneAdder:MainAdder.A[8]
+A[9] => KoggeStoneAdder:MainAdder.A[9]
+A[10] => KoggeStoneAdder:MainAdder.A[10]
+A[11] => KoggeStoneAdder:MainAdder.A[11]
+A[12] => KoggeStoneAdder:MainAdder.A[12]
+A[13] => KoggeStoneAdder:MainAdder.A[13]
+A[14] => KoggeStoneAdder:MainAdder.A[14]
+A[15] => KoggeStoneAdder:MainAdder.A[15]
+B[0] => Get1Complement:Take2Complement.invec[0]
+B[1] => Get1Complement:Take2Complement.invec[1]
+B[2] => Get1Complement:Take2Complement.invec[2]
+B[3] => Get1Complement:Take2Complement.invec[3]
+B[4] => Get1Complement:Take2Complement.invec[4]
+B[5] => Get1Complement:Take2Complement.invec[5]
+B[6] => Get1Complement:Take2Complement.invec[6]
+B[7] => Get1Complement:Take2Complement.invec[7]
+B[8] => Get1Complement:Take2Complement.invec[8]
+B[9] => Get1Complement:Take2Complement.invec[9]
+B[10] => Get1Complement:Take2Complement.invec[10]
+B[11] => Get1Complement:Take2Complement.invec[11]
+B[12] => Get1Complement:Take2Complement.invec[12]
+B[13] => Get1Complement:Take2Complement.invec[13]
+B[14] => Get1Complement:Take2Complement.invec[14]
+B[15] => Get1Complement:Take2Complement.invec[15]
+Cout <= KoggeStoneAdder:MainAdder.Carryout
+Select0 => SelectHandler:HandleSelect.Select0
+Select1 => SelectHandler:HandleSelect.Select1
+Sum[0] <= KoggeStoneAdder:MainAdder.Sum[0]
+Sum[1] <= KoggeStoneAdder:MainAdder.Sum[1]
+Sum[2] <= KoggeStoneAdder:MainAdder.Sum[2]
+Sum[3] <= KoggeStoneAdder:MainAdder.Sum[3]
+Sum[4] <= KoggeStoneAdder:MainAdder.Sum[4]
+Sum[5] <= KoggeStoneAdder:MainAdder.Sum[5]
+Sum[6] <= KoggeStoneAdder:MainAdder.Sum[6]
+Sum[7] <= KoggeStoneAdder:MainAdder.Sum[7]
+Sum[8] <= KoggeStoneAdder:MainAdder.Sum[8]
+Sum[9] <= KoggeStoneAdder:MainAdder.Sum[9]
+Sum[10] <= KoggeStoneAdder:MainAdder.Sum[10]
+Sum[11] <= KoggeStoneAdder:MainAdder.Sum[11]
+Sum[12] <= KoggeStoneAdder:MainAdder.Sum[12]
+Sum[13] <= KoggeStoneAdder:MainAdder.Sum[13]
+Sum[14] <= KoggeStoneAdder:MainAdder.Sum[14]
+Sum[15] <= KoggeStoneAdder:MainAdder.Sum[15]
+Zero <= ZeroBitCalculator:CalculateZeroBit.zeroBit
+
+
+|ALU|SelectHandler:HandleSelect
+Select0 => toSubtract.IN0
+Select0 => toXOR.IN0
+Select0 => toNAND.IN0
+Select1 => toXOR.IN1
+Select1 => toNAND.IN1
+Select1 => toSubtract.IN1
+toSubtract <= toSubtract.DB_MAX_OUTPUT_PORT_TYPE
+toXOR <= toXOR.DB_MAX_OUTPUT_PORT_TYPE
+toNAND <= toNAND.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement
+invec[0] => XOR_2input:lab:0:XORGate.in1
+invec[1] => XOR_2input:lab:1:XORGate.in1
+invec[2] => XOR_2input:lab:2:XORGate.in1
+invec[3] => XOR_2input:lab:3:XORGate.in1
+invec[4] => XOR_2input:lab:4:XORGate.in1
+invec[5] => XOR_2input:lab:5:XORGate.in1
+invec[6] => XOR_2input:lab:6:XORGate.in1
+invec[7] => XOR_2input:lab:7:XORGate.in1
+invec[8] => XOR_2input:lab:8:XORGate.in1
+invec[9] => XOR_2input:lab:9:XORGate.in1
+invec[10] => XOR_2input:lab:10:XORGate.in1
+invec[11] => XOR_2input:lab:11:XORGate.in1
+invec[12] => XOR_2input:lab:12:XORGate.in1
+invec[13] => XOR_2input:lab:13:XORGate.in1
+invec[14] => XOR_2input:lab:14:XORGate.in1
+invec[15] => XOR_2input:lab:15:XORGate.in1
+toSubtract => XOR_2input:lab:0:XORGate.in2
+toSubtract => XOR_2input:lab:1:XORGate.in2
+toSubtract => XOR_2input:lab:2:XORGate.in2
+toSubtract => XOR_2input:lab:3:XORGate.in2
+toSubtract => XOR_2input:lab:4:XORGate.in2
+toSubtract => XOR_2input:lab:5:XORGate.in2
+toSubtract => XOR_2input:lab:6:XORGate.in2
+toSubtract => XOR_2input:lab:7:XORGate.in2
+toSubtract => XOR_2input:lab:8:XORGate.in2
+toSubtract => XOR_2input:lab:9:XORGate.in2
+toSubtract => XOR_2input:lab:10:XORGate.in2
+toSubtract => XOR_2input:lab:11:XORGate.in2
+toSubtract => XOR_2input:lab:12:XORGate.in2
+toSubtract => XOR_2input:lab:13:XORGate.in2
+toSubtract => XOR_2input:lab:14:XORGate.in2
+toSubtract => XOR_2input:lab:15:XORGate.in2
+toSubtract => carry.DATAIN
+outvec[0] <= XOR_2input:lab:0:XORGate.output
+outvec[1] <= XOR_2input:lab:1:XORGate.output
+outvec[2] <= XOR_2input:lab:2:XORGate.output
+outvec[3] <= XOR_2input:lab:3:XORGate.output
+outvec[4] <= XOR_2input:lab:4:XORGate.output
+outvec[5] <= XOR_2input:lab:5:XORGate.output
+outvec[6] <= XOR_2input:lab:6:XORGate.output
+outvec[7] <= XOR_2input:lab:7:XORGate.output
+outvec[8] <= XOR_2input:lab:8:XORGate.output
+outvec[9] <= XOR_2input:lab:9:XORGate.output
+outvec[10] <= XOR_2input:lab:10:XORGate.output
+outvec[11] <= XOR_2input:lab:11:XORGate.output
+outvec[12] <= XOR_2input:lab:12:XORGate.output
+outvec[13] <= XOR_2input:lab:13:XORGate.output
+outvec[14] <= XOR_2input:lab:14:XORGate.output
+outvec[15] <= XOR_2input:lab:15:XORGate.output
+carry <= toSubtract.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:0:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:1:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:2:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:3:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:4:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:5:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:6:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:7:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:8:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:9:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:10:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:11:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:12:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:13:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:14:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Get1Complement:Take2Complement|XOR_2input:\lab:15:XORGate
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder
+A[0] => gpgen:stg00:0:pm.a
+A[1] => gpgen:stg00:1:pm.a
+A[2] => gpgen:stg00:2:pm.a
+A[3] => gpgen:stg00:3:pm.a
+A[4] => gpgen:stg00:4:pm.a
+A[5] => gpgen:stg00:5:pm.a
+A[6] => gpgen:stg00:6:pm.a
+A[7] => gpgen:stg00:7:pm.a
+A[8] => gpgen:stg00:8:pm.a
+A[9] => gpgen:stg00:9:pm.a
+A[10] => gpgen:stg00:10:pm.a
+A[11] => gpgen:stg00:11:pm.a
+A[12] => gpgen:stg00:12:pm.a
+A[13] => gpgen:stg00:13:pm.a
+A[14] => gpgen:stg00:14:pm.a
+A[15] => gpgen:stg00:15:pm.a
+B[0] => gpgen:stg00:0:pm.b
+B[1] => gpgen:stg00:1:pm.b
+B[2] => gpgen:stg00:2:pm.b
+B[3] => gpgen:stg00:3:pm.b
+B[4] => gpgen:stg00:4:pm.b
+B[5] => gpgen:stg00:5:pm.b
+B[6] => gpgen:stg00:6:pm.b
+B[7] => gpgen:stg00:7:pm.b
+B[8] => gpgen:stg00:8:pm.b
+B[9] => gpgen:stg00:9:pm.b
+B[10] => gpgen:stg00:10:pm.b
+B[11] => gpgen:stg00:11:pm.b
+B[12] => gpgen:stg00:12:pm.b
+B[13] => gpgen:stg00:13:pm.b
+B[14] => gpgen:stg00:14:pm.b
+B[15] => gpgen:stg00:15:pm.b
+toXOR => temp4[0].IN0
+toXOR => temp4[1].IN1
+toXOR => temp4[2].IN1
+toXOR => temp4[3].IN1
+toXOR => temp4[4].IN1
+toXOR => temp4[5].IN1
+toXOR => temp4[6].IN1
+toXOR => temp4[7].IN1
+toXOR => temp4[8].IN1
+toXOR => temp4[9].IN1
+toXOR => temp4[10].IN1
+toXOR => temp4[11].IN1
+toXOR => temp4[12].IN1
+toXOR => temp4[13].IN1
+toXOR => temp4[14].IN1
+toXOR => temp4[15].IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+toNAND => Sum.IN1
+initialCarry => temp4[0].IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+initialCarry => C.IN1
+Carryout <= C.DB_MAX_OUTPUT_PORT_TYPE
+Sum[0] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[1] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[2] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[3] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[4] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[5] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[6] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[7] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[8] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[9] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[10] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[11] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[12] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[13] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[14] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Sum[15] <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:0:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:0:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:0:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:1:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:1:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:1:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:2:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:2:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:2:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:3:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:3:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:3:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:4:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:4:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:4:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:5:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:5:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:5:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:6:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:6:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:6:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:7:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:7:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:7:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:8:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:8:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:8:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:9:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:9:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:9:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:10:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:10:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:10:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:11:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:11:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:11:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:12:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:12:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:12:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:13:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:13:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:13:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:14:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:14:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:14:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:15:pm
+a => and_2input:Ggen.in1
+a => XOR_2input:Pgen.in1
+b => and_2input:Ggen.in2
+b => XOR_2input:Pgen.in2
+g <= and_2input:Ggen.output
+p <= XOR_2input:Pgen.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:15:pm|and_2input:Ggen
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|gpgen:\stg00:15:pm|XOR_2input:Pgen
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:0:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:0:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:0:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:1:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:1:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:1:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:2:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:2:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:2:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:3:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:3:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:3:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:4:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:4:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:4:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:5:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:5:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:5:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:6:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:6:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:6:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:7:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:7:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:7:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:8:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:8:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:8:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:9:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:9:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:9:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:10:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:10:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:10:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:11:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:11:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:11:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:12:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:12:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:12:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:13:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:13:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:13:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:14:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:14:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg01:14:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:0:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:0:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:0:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:1:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:1:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:1:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:2:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:2:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:2:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:3:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:3:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:3:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:4:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:4:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:4:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:5:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:5:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:5:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:6:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:6:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:6:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:7:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:7:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:7:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:8:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:8:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:8:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:9:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:9:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:9:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:10:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:10:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:10:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:11:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:11:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:11:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:12:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:12:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:12:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:13:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:13:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg02:13:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:0:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:0:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:0:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:1:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:1:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:1:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:2:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:2:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:2:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:3:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:3:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:3:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:4:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:4:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:4:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:5:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:5:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:5:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:6:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:6:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:6:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:7:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:7:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:7:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:8:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:8:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:8:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:9:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:9:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:9:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:10:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:10:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:10:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:11:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:11:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg03:11:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:0:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:0:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:0:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:1:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:1:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:1:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:2:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:2:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:2:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:3:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:3:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:3:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:4:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:4:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:4:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:5:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:5:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:5:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:6:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:6:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:6:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:7:pm
+g1 => and_2input:andsignal1.in1
+p1 => and_2input:andsignal2.in1
+g2 => G.IN1
+p2 => and_2input:andsignal1.in2
+p2 => and_2input:andsignal2.in2
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+P <= and_2input:andsignal2.output
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:7:pm|and_2input:andsignal1
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|node_operation:\stg04:7:pm|and_2input:andsignal2
+in1 => output.IN0
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:1:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:2:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:3:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:4:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:5:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:6:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:7:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:8:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:9:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:10:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:11:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:12:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:13:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:14:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:15:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|KoggeStoneAdder:MainAdder|XOR_2input:\post:16:x
+in1 => output.IN0
+in1 => output.IN0
+in2 => output.IN1
+in2 => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|ZeroBitCalculator:CalculateZeroBit
+invec[0] => temp1.IN0
+invec[1] => temp1.IN1
+invec[2] => temp1.IN1
+invec[3] => temp1.IN1
+invec[4] => temp1.IN1
+invec[5] => temp1.IN1
+invec[6] => temp1.IN1
+invec[7] => temp1.IN1
+invec[8] => temp1.IN1
+invec[9] => temp1.IN1
+invec[10] => temp1.IN1
+invec[11] => temp1.IN1
+invec[12] => temp1.IN1
+invec[13] => temp1.IN1
+invec[14] => temp1.IN1
+invec[15] => temp1.IN1
+zeroBit <= temp1.DB_MAX_OUTPUT_PORT_TYPE
+
+

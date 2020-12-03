@@ -13,5 +13,3 @@ begin
 	toXOR <= Select0 and Select1; -- 1 when we need to XOR, otherwise 0
 	toNAND <= (not Select0) and Select1; -- 1 when we need to NAND, otherwise 0
 end SelectLogic;
-	
-	

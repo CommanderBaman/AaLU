@@ -2,9 +2,9 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 entity gpgen is
-  (port  
+  port(  
        a , b: in bit;
-		 g , p: out bit;
+		 g , p: out bit
 	);
 end gpgen;
 
@@ -12,9 +12,10 @@ Architecture Arch of	gpgen is
 
    component XOR_2input is
 		port (
-			in1, in2: in bit; 
+			in1, in2: in bit;
 			output: out bit 
 		);
+		end component;
 	 component and_2input is
 		port (
 			in1, in2: in bit; 
